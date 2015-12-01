@@ -18,7 +18,12 @@ class Remove_Spaces
     }
 }
 
-$str = 'Do you just mean spaces or all whitespace?';
+if ($argc != 2) {
+    echo "Removing spaces from string: ['sting'].\n";
+    exit(1);
+}
+$str = $argv[1];
+//$str = 'Do you just mean spaces or all whitespace?';
 
 $string = new Remove_Spaces($str);
 print_r('remove spaces w1 '.$string->remove_spaces_w1()."\n");

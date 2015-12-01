@@ -36,8 +36,17 @@ class Substring{
 
 }
 
-$subject = "abcdefg";
-$pattern = 'def';
+
+if ($argc != 3) {
+    echo "Checking Substring in String: [String, Substring].\n";
+    exit(1);
+}
+$subject = $argv[1];
+$pattern = $argv[2];
+
+
+//$subject = "abcdefg";
+//$pattern = 'def';
 $sub = new Substring($subject, $pattern);
 
 print_r($sub->check_entry_w1()."\n");
