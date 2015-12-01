@@ -2,15 +2,15 @@
 
 class Array_Min_Max{
 
-	private $array;
+	public $array;
 
-	function __construct($array){
+	public function __construct($array){
 		if(is_array($array)){
 			$this->$array = $array;
 		}
 	}
 
-	function get_array_max_value($array){
+	public function get_array_max_value($array){
 
 		$array_max_value_w1 = max($array);
 
@@ -27,7 +27,7 @@ class Array_Min_Max{
 				Max Value way 2: $array_max_value_w2 \n";
 	}
 
-	function get_array_min_value($array){
+	public function get_array_min_value($array){
 
 		$array_min_value_w1 = min($array);
 

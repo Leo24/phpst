@@ -4,13 +4,13 @@ class Array_Sum{
 
 	public $array;
 
-	function __construct($array){
+	public function __construct($array){
 		if(is_array($array)){
 			$this->$array = $array;
 		}
 	}
 
-	function get_array_sum($array){
+	public function get_array_sum($array){
 		$array_sum_w1 = array_sum ($array);
 
 		$array_sum_w2 = 0;
