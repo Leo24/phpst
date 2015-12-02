@@ -1,0 +1,1 @@
+Browse to current directory /quick-sort and run in console php quick_sort.php

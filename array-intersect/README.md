@@ -1,0 +1,1 @@
+Browse to current directory /array-intersect and run in console  php array_intersect.php

@@ -23,5 +23,5 @@ class Files_As_Tree
 }
 
 
-$tree = new Files_As_Tree("./", "");
-$tree->showTree("./", "");
+$tree = new Files_As_Tree();
+$tree->showTree("../", "");
