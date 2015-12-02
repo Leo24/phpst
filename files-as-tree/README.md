@@ -1,0 +1,1 @@
+Browse to current directory /files-as-tree and run in console php files_as_tree.php
