@@ -1,7 +1,14 @@
 <?php
 class Array_Intersect
 {
+
+    /**
+     * @var array the array_1 to check for intersection
+     */
     public $array_1 = array();
+    /**
+     * @var array the array_2 to check for intersection
+     */
     public $array_2 = array();
 
     public function __construct($array_1, $array_2)
@@ -10,6 +17,9 @@ class Array_Intersect
         $this->array_2 = $array_2;
     }
 
+    /**
+     * Checks array_1 and array_2 for intersection using build-in function
+     */
     public function intersect_way1()
     {
         $diff = array_intersect($this->array_1, $this->array_2);
@@ -20,6 +30,9 @@ class Array_Intersect
 
     }
 
+    /**
+     * Checks array_1 and array_2 for intersection using foreach function
+     */
     public function intersect_way2()
     {
         $intersection = array();

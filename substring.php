@@ -5,12 +5,20 @@ class Substring{
     public $string;
     public $substring;
 
+    /**
+     * @var string the string
+     *
+     * @var string the substring for search inside substring
+     */
     public function __construct($string, $substring)
     {
         $this->string = $string;
         $this->substring = $substring;
     }
 
+    /**
+     * Checks entry substring in string with strpos() built-in function
+     */
     public function check_entry_w1()
     {
         if (strpos($this->string, $this->substring) !== false) {
@@ -19,6 +27,9 @@ class Substring{
         return false;
     }
 
+    /**
+     * Checks entry substring in string with stristr() built-in function
+     */
     public function check_entry_w2()
     {
         if(stristr($this->string, $this->substring) !== false) {
@@ -27,6 +38,9 @@ class Substring{
         return false;
     }
 
+    /**
+     * Checks entry substring in string using regular expressions
+     */
     public function check_entry_w3()
     {
         $str = '/'.$this->substring.'/';

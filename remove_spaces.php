@@ -3,15 +3,25 @@ class Remove_Spaces
 {
     public $string;
 
+    /**
+     * @var string the string to remove spases from it
+     */
     public function __construct($string)
     {
         $this->string = $string;
     }
 
+    /**
+     * Removes spaces from string using built-in function str_replace()
+     */
     public function remove_spaces_w1()
     {
         return str_replace(' ', '', $this->string);
     }
+
+    /**
+     * Removes spaces from string using regular expressions
+     */
     public function remove_spaces_w2()
     {
         return preg_replace('/\s+/', '', $this->string);

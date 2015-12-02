@@ -2,6 +2,9 @@
 
 class Array_Sum{
 
+	/**
+	 * @var array the array to get sum
+	 */
 	public $array;
 
 	public function __construct($array){
@@ -10,11 +13,14 @@ class Array_Sum{
 		}
 	}
 
-	public function get_array_sum($array){
-		$array_sum_w1 = array_sum ($array);
+	/**
+	 * Gets array sum using build-in function and foreach
+	 */
+	public function get_array_sum(){
+		$array_sum_w1 = array_sum ($this->array);
 
 		$array_sum_w2 = 0;
-		foreach ($array as $key => $value) {
+		foreach ($this->array as $key => $value) {
 			$array_sum_w2 += $value;
 		}
 
@@ -26,4 +32,4 @@ class Array_Sum{
 
 $array = [1,2,3,4,15,6,7,8,9,10];
 $Array_Sum_Instance = new Array_Sum($array);
-$Array_Sum_Instance->get_array_sum($Array_Sum_Instance->$array);
+$Array_Sum_Instance->get_array_sum();
