@@ -2,7 +2,11 @@
 
 class Files_As_Tree
 {
-
+    /**
+     * @var string the folder for search inside
+     *
+     * @var string the space - space between filenames
+     */
     public function showTree($folder, $space)
     {
         $files = scandir($folder);

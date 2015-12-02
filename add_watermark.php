@@ -3,6 +3,9 @@
 class Add_Watermark
 {
 
+    /**
+     * Adds watermark to images
+     */
     public function add_watermark(){
 
         // Load the stamp and the photo to apply the watermark to

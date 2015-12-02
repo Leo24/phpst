@@ -2,6 +2,9 @@
 
 class Check_Palindrome{
 
+    /**
+     * @var string the word_to_check to check for palindrome
+     */
     public $word_to_check;
 
     public function __construct($word)
@@ -9,6 +12,9 @@ class Check_Palindrome{
         $this->word_to_check = $word;
     }
 
+    /**
+     * Checks entry string for palindrome using build-in functions
+     */
     public function check_palindrome_w1()
     {
         $word = str_replace(' ', '', $this->word_to_check);
@@ -20,6 +26,9 @@ class Check_Palindrome{
         return "Output w1: " . $this->word_to_check . " is not a palindrome\n";
     }
 
+    /**
+     * Checks entry string for palindrome using build-in functions and array functions
+     */
     public function check_palindrome_w2()
     {
         $array = str_split($this->word_to_check);

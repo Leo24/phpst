@@ -2,12 +2,17 @@
 
 class Array_Quick_Sort
 {
-
+    /**
+     * @var array the array to sort
+     */
     public function __construct($array)
     {
         $this->qsort($array);
     }
 
+    /**
+     * Gets center value of array
+     */
     public function qsort($array) {
 
         $left = 0;
@@ -17,6 +22,9 @@ class Array_Quick_Sort
 
     }
 
+    /**
+     * Sorts array using recursion
+     */
     public function array_sort($array, $left, $right) {
 
 //Create copies of income variables

@@ -2,6 +2,9 @@
 
 class Array_Min_Max{
 
+	/**
+	 * @var array the array to get min, max values
+	 */
 	public $array;
 
 	public function __construct($array){
@@ -10,11 +13,14 @@ class Array_Min_Max{
 		}
 	}
 
-	public function get_array_max_value($array){
+	/**
+	 * Gets array max value using build-in function max and foreach
+	 */
+	public function get_array_max_value(){
 
-		$array_max_value_w1 = max($array);
+		$array_max_value_w1 = max($this->array);
 
-		$processed_array = $array;
+		$processed_array = $this->array;
 		$array_max_value_w2 = $processed_array[0];
 		foreach ($processed_array as $key => $value) {
 			if($array_max_value_w2 < $value){
@@ -27,11 +33,14 @@ class Array_Min_Max{
 				Max Value way 2: $array_max_value_w2 \n";
 	}
 
-	public function get_array_min_value($array){
+	/**
+	 * Gets array max value using build-in function min and foreach
+	 */
+	public function get_array_min_value(){
 
-		$array_min_value_w1 = min($array);
+		$array_min_value_w1 = min($this->array);
 
-		$processed_array = $array;
+		$processed_array = $this->array;
 		$array_min_value_w2 = $processed_array[0];
 		foreach ($processed_array as $key => $value) {
 			if($array_min_value_w2 > $value){
@@ -48,6 +57,6 @@ class Array_Min_Max{
 $array = [-1,1,2,3,4,15,16,7,8,9,10];
 $Array_Min_Max_Instance = new Array_Min_Max($array);
 
-$Array_Min_Max_Instance->get_array_max_value($Array_Min_Max_Instance->$array);
-$Array_Min_Max_Instance->get_array_min_value($Array_Min_Max_Instance->$array);
+$Array_Min_Max_Instance->get_array_max_value();
+$Array_Min_Max_Instance->get_array_min_value();
 
