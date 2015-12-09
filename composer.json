@@ -1,5 +1,19 @@
 {
-  "autoload": {
-    "psr-4": {"Phpst\\": "phpst/"}
-  }
+    "name": "leonid/phpst",
+    "license": "free",
+    "authors": [
+        {
+            "name": "LeonidR",
+            "email": "leo2410@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "j7mbo/twitter-api-php": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "TwitterApi": "vendor/twitter-api-php/"
+        }
+    }
 }

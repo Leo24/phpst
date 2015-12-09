@@ -1,0 +1,1 @@
+Browse to current directory /check-palindrome and run in console php check_palindrome.php

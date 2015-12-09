@@ -1,0 +1,1 @@
+Browse to current directory /array-sum and run in console php array_sum.php
