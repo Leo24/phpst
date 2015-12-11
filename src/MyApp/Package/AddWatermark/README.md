@@ -1,1 +1,0 @@
-Browse to current directory /add-watermark and run in console php add_watermark.php

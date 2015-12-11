@@ -1,1 +1,0 @@
-Browse to current directory /substring and run in console php substring.php
