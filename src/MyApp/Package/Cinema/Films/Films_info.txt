@@ -1,0 +1,78 @@
+filmName: 'Lock, Stock and Two Smoking Barrels';
+directorName: 'Guy Ritchie';
+        $actors = array(
+                        'Jason Flemyng',
+                        'Dexter Fletcher',
+                        'Nick Moran',
+                        'Jason Statham',
+                        'Steven Mackintosh',
+                        'Steven Mackintosh',
+                        'Nicholas Rowe',
+                        'Nick Marcq'
+                     );
+releaseYear: '1998';
+
+
+
+filmName: 'Lucy';
+
+directorName: 'Luc Besson';
+        $actors = array(
+            'Scarlett Johansson',
+            'Morgan Freeman',
+            'Choi Min-sik',
+            'Amr Waked',
+        );
+releaseYear: '2014';
+
+
+
+filmName: 'Meet Joe Black';
+directorName: 'Martin Brest';
+    $actors = array(
+            'Brad Pitt',
+            'Anthony Hopkins',
+            'Claire Forlani',
+            'Jake Weber',
+            'Marcia Gay Harden',
+            'Jeffrey Tambor',
+            'Lois Kelly-Miller',
+            'David S. Howard'
+        );
+
+releaseYear; '1998';
+
+
+
+
+
+filmName: 'Mission_Imposible';
+directorName: 'Brian De Palma';
+        $actors = array(
+            'Tom Cruise',
+            'Ving Rhames',
+            'Simon Pegg',
+            'Jeremy Renner',
+            'Jon Voight',
+            'Emmanuelle Béart',
+            'Henry Czerny',
+            'Vanessa Redgrave'
+        );
+
+releaseYear: '1996';
+
+
+
+filmName: 'The Transporter';
+
+
+directorName: 'Louis Leterrier';
+
+        $actors = array(
+                    'Jason Statham',
+                    'Shu Qi',
+                    'François Berléand',
+                    'Matt Schulze'
+                    );
+
+releaseYear: '2002';
