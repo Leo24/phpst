@@ -1,13 +1,16 @@
 <?php
 
-trait Transporter{
+namespace MyApp\Package\Cinema\Sessions;
 
-    public function film_name()
+trait Transporter
+{
+
+    public function filmName()
     {
         return 'The Transporter';
     }
 
-    public function director_name()
+    public function directorName()
     {
         return 'Louis Leterrier';
     }
@@ -23,7 +26,7 @@ trait Transporter{
         return $actors;
     }
 
-    public function release_year()
+    public function releaseYear()
     {
         return '2002';
     }

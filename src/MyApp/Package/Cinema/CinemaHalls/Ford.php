@@ -1,7 +1,9 @@
 <?php
 
-require_once('../sessions/lock_stock.php');
-require_once('../sessions/lucy.php');
+namespace MyApp\Package\Cinema\CinemaHalls;
+
+require_once('../Sessions/LockStock.php');
+require_once('../Sessions/Lucy.php');
 
 class Ford_Hall extends Cinema_Hall{
 

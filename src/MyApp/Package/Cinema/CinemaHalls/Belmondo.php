@@ -1,6 +1,8 @@
 <?php
 
-require_once('../sessions/transporter.php');
+namespace MyApp\Package\Cinema\CinemaHalls;
+
+require_once('../Sessions/Transporter.php');
 
 
 class Belmondo_Hall extends Cinema_Hall{

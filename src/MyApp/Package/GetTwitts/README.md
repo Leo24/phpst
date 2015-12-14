@@ -1,1 +1,0 @@
-Browse to current directory /get-twitts and run in console php get_twitts.php

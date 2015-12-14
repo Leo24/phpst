@@ -1,13 +1,16 @@
 <?php
 
-trait Lucy{
+namespace MyApp\Package\Cinema\Sessions;
 
-    public function film_name()
+trait Lucy
+{
+
+    public function filmName()
     {
         return 'Lucy';
     }
 
-    public function director_name()
+    public function directorName()
     {
         return 'Luc Besson';
     }
@@ -23,7 +26,7 @@ trait Lucy{
         return $actors;
     }
 
-    public function release_year()
+    public function releaseYear()
     {
         return '2014';
     }

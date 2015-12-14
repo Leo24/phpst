@@ -1,1 +1,0 @@
-Browse to current directory /remove-spaces and run in console php remove_spaces.php

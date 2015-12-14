@@ -1,7 +1,9 @@
 <?php
 
-require_once('../sessions/meet_joe_black.php');
-require_once('../sessions/mission_impossible.php');
+namespace MyApp\Package\Cinema\CinemaHalls;
+
+require_once('../Sessions/MeetJoeBlack.php');
+require_once('../Sessions/MissionImpossible.php');
 
 class Cameron_Hall extends Cinema_Hall{
 

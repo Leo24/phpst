@@ -1,6 +1,8 @@
 <?php
 
-abstract class Cinema_Hall
+namespace MyApp\Package\Cinema\CinemaHalls;
+
+abstract class CinemaHall
 {
 
     public $hall_name;

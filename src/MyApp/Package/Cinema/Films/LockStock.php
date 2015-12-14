@@ -1,13 +1,16 @@
 <?php
 
-trait Lock_Stock_2_Barels{
+namespace MyApp\Package\Cinema\Sessions;
 
-    public function film_name()
+trait LockStock2Barels
+{
+
+    public function filmName()
     {
         return 'Lock, Stock and Two Smoking Barrels';
     }
 
-    public function director_name()
+    public function directorName()
     {
         return 'Guy Ritchie';
     }
@@ -27,7 +30,7 @@ trait Lock_Stock_2_Barels{
         return $actors;
     }
 
-    public function release_year()
+    public function releaseYear()
     {
         return '1998';
     }

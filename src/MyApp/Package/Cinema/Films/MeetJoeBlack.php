@@ -1,13 +1,16 @@
 <?php
 
-trait Meet_Joe_Black{
+namespace MyApp\Package\Cinema\Sessions;
 
-    public function film_name()
+trait MeetJoeBlack
+{
+
+    public function filmName()
     {
         return 'Meet Joe Black';
     }
 
-    public function director_name()
+    public function directorName()
     {
         return 'Martin Brest';
     }
@@ -27,7 +30,7 @@ trait Meet_Joe_Black{
         return $actors;
     }
 
-    public function release_year()
+    public function releaseYear()
     {
         return '1998';
     }

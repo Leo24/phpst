@@ -5,8 +5,6 @@ namespace MyApp\Package\Cinema;
 class Cinema
 {
     public $user;
-    public $student_discount;
-    public $schoolkid_discount;
     public $halls_list;
     public $sessions_list;
 
@@ -20,10 +18,11 @@ class Cinema
 
     public function checkUser()
     {
+        $discount = new Discount\Discount();
         if ($this->user == 'student') {
-            return ($this->getPrice() - $this->student_discount);
+            return ($this->getPrice() - $discount->getStudentDiscount());
         } elseif ($this->user == 'schoolkid') {
-            return ($this->getPrice() - $this->schoolkid_discount);
+            return ($this->getPrice() - $discount->getSchoolkidDiscount());
         }
         return $this->getPrice();
     }

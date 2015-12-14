@@ -1,1 +1,0 @@
-Browse to current directory /array-min-max and run in console php array_min_max.php
