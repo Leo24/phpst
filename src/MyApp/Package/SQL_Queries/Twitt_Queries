@@ -1,0 +1,44 @@
+Вывести последние 5 опубликованных твиттов.
+
+SELECT id, content FROM twitt
+WHERE create_date <= CURRENT_DATE()
+ORDER by id ASC
+LIMIT 5
+
+
+Вывести средний возраст всех пользователей твиттера.
+SELECT SUM(DATEDIFF(CURRENT_DATE(), u.birthdate)/365)/COUNT(u.id)
+AS average_age FROM user as u
+
+
+Вывести к-во follower-ов для каждого пользователя.
+
+SELECT u.id, u.first_name, f.user_id, COUNT(f.follower_id) as follower  FROM user as u
+LEFT JOIN followers as f
+ON u.id=f.user_id
+GROUP BY u.id
+
+
+Вывести пользователей у которых есть хотя бы один follower.
+
+SELECT u.id, u.first_name, f.user_id, COUNT(f.follower_id) as follower  FROM user as u
+LEFT JOIN followers as f
+ON u.id=f.user_id
+GROUP BY u.id
+HAVING follower>1
+
+
+Вывести пользователей у которых ни одного твита.
+
+SELECT u.id, u.first_name, t.id FROM user as u
+LEFT JOIN twitt as t
+ON u.id=t.user_id
+WHERE t.user_id IS NULL
+
+
+Вывести к-во комментариев для каждого поста.
+
+SELECT twitt.id, twitt.content, COUNT(comments.twitt_id) FROM `twitt`
+LEFT JOIN `comments`
+ON twitt.id=comments.twitt_id
+GROUP BY comments.twitt_id
