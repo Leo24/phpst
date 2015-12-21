@@ -1,0 +1,49 @@
+Вывести к-во всех постов.
+
+SELECT COUNT(*) FROM post
+
+
+Вывести к-во постов опубликованных за последний день.
+
+SELECT id, name FROM post 
+WHERE status='published' AND publish_date = CURRENT_DATE()
+
+
+Вывести последние 5 опубликованных постов.
+
+SELECT id, name FROM post 
+WHERE status='published' AND publish_date < CURRENT_DATE()
+ORDER by id ASC
+LIMIT 5
+
+
+Вывести все посты со списком тегов, разделенными запятыми.
+SELECT post.id, post.name, post_tags.tag_id 
+INTO OUTFILE '/home/leonid/Documents/Query_result/Query_result.txt'
+FIELDS TERMINATED BY ','
+FROM `post`
+LEFT JOIN `post_tags`
+ON post.id=post_tags.post_id
+
+
+Вывести все посты у которых нет тегов.
+
+SELECT post.id, post.name FROM `post`
+LEFT JOIN `post_tags` 
+ON post.id=post_tags.post_id
+WHERE post_tags.post_id IS NULL
+
+
+Вывести все посты, которые начинаются на букву 'S'.
+
+SELECT id, name FROM post 
+WHERE name LIKE 'S%'
+
+
+Для каждого тега, вывести к-во постов.
+
+SELECT tags.id, tags.name, COUNT(post_tags.tag_id) as post_count 
+FROM `tags`
+LEFT JOIN `post_tags` 
+ON tags.id=post_tags.tag_id
+GROUP BY tags.id
