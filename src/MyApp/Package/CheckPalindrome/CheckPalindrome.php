@@ -8,11 +8,11 @@ class CheckPalindrome
     /**
      * @var string the word_to_check to check for palindrome
      */
-    public $word_to_check;
+    public $wordToCheck;
 
     public function __construct($word)
     {
-        $this->word_to_check = strtolower($word);
+        $this->wordToCheck = strtolower($word);
     }
 
     /**
@@ -20,13 +20,13 @@ class CheckPalindrome
      */
     public function checkPalindromeW1()
     {
-        $word = str_replace(' ', '', $this->word_to_check);
+        $word = str_replace(' ', '', $this->wordToCheck);
         $word = strrev($word);
 
-        if ($word == $this->word_to_check) {
-            return "Output w1: " . $this->word_to_check . " is a palindrome\n";
+        if ($word == $this->wordToCheck) {
+            return "Output w1: " . $this->wordToCheck . " is a palindrome\n";
         }
-        return "Output w1: " . $this->word_to_check . " is not a palindrome\n";
+        return "Output w1: " . $this->wordToCheck . " is not a palindrome\n";
     }
 
     /**
@@ -34,17 +34,17 @@ class CheckPalindrome
      */
     public function checkPalindromeW2()
     {
-        $array = str_split($this->word_to_check);
+        $array = str_split($this->wordToCheck);
         $len = sizeof($array);
         $newString = "";
 
         for ($i = $len; $i >= 0; $i--) {
             $newString.=$array[$i];
         }
-        if ($this->word_to_check == $newString) {
-            return "Output w2: " . $this->word_to_check . " is a palindrome\n";
+        if ($this->wordToCheck == $newString) {
+            return "Output w2: " . $this->wordToCheck . " is a palindrome\n";
         }
-            return "Output w2: " . $this->word_to_check . " is not a palindrome\n";
+            return "Output w2: " . $this->wordToCheck . " is not a palindrome\n";
     }
 }
 

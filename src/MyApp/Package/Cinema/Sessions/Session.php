@@ -6,40 +6,40 @@ use MyApp\Package\Cinema\Films\Film;
 
 class Session
 {
-    private $session_name;
-    private $session_start_time;
-    private $session_end_time;
+    private $sessionName;
+    private $sessionStartTime;
+    private $sessionEndTime;
     private $film;
-    private $session_price;
+    private $sessionPrice;
 
 
     /**
-     * @param $session_name
+     * @param $sessionName
      * @param $film
      */
     public function __construct(
-        $session_name,
+        $sessionName,
         Film $film
     ) {
-        $this->session_name = $session_name;
+        $this->sessionName = $sessionName;
         $this->film = $film;
 
     }
 
     /**
-     * @param $session_start_time
+     * @param $sessionStartTime
      */
-    public function setSessionStartTime($session_start_time)
+    public function setSessionStartTime($sessionStartTime)
     {
-        $this->session_start_time = $session_start_time;
+        $this->sessionStartTime = $sessionStartTime;
     }
 
     /**
-     * @param $session_end_time
+     * @param $sessionEndTime
      */
-    public function setSessionEndTime($session_end_time)
+    public function setSessionEndTime($sessionEndTime)
     {
-        $this->session_end_time = $session_end_time;
+        $this->sessionEndTime = $sessionEndTime;
     }
 
     /**
@@ -47,7 +47,7 @@ class Session
      */
     public function getSessionStartTime()
     {
-        return $this->session_start_time;
+        return $this->sessionStartTime;
     }
 
     /**
@@ -55,15 +55,15 @@ class Session
      */
     public function getSessionEndTime()
     {
-        return $this->session_end_time;
+        return $this->sessionEndTime;
     }
 
     /**
      * @param $session_price
      */
-    public function setPrice($session_price)
+    public function setPrice($sessionPrice)
     {
-        $this->session_price = $session_price;
+        $this->sessionPrice = $sessionPrice;
     }
 
     /**
@@ -71,6 +71,6 @@ class Session
      */
     public function getPrice()
     {
-        return $this->session_price;
+        return $this->sessionPrice;
     }
 }

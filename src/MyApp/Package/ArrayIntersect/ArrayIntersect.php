@@ -8,16 +8,16 @@ class ArrayIntersect
     /**
      * @var array the array_1 to check for intersection
      */
-    public $array_1 = array();
+    public $array1 = array();
     /**
      * @var array the array_2 to check for intersection
      */
-    public $array_2 = array();
+    public $array2 = array();
 
-    public function __construct($array_1, $array_2)
+    public function __construct($array1, $array2)
     {
-        $this->array_1 = $array_1;
-        $this->array_2 = $array_2;
+        $this->array1 = $array1;
+        $this->array2 = $array2;
     }
 
     /**
@@ -25,7 +25,7 @@ class ArrayIntersect
      */
     public function intersectWay1()
     {
-        $diff = array_intersect($this->array_1, $this->array_2);
+        $diff = array_intersect($this->array1, $this->array2);
         echo "array intersect way 1: \n";
         foreach ($diff as $k => $v) {
             echo "\"$k\" =>\"$v\"\n";
@@ -39,8 +39,8 @@ class ArrayIntersect
     public function intersectWay2()
     {
         $intersection = array();
-        foreach ($this->array_1 as $key => $value) {
-            foreach ($this->array_2 as $k => $val) {
+        foreach ($this->array1 as $key => $value) {
+            foreach ($this->array2 as $k => $val) {
                 if (strtolower($value) == strtolower($val)) {
                     $intersection[] = $value;
                 }

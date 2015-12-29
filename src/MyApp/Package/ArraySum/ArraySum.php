@@ -22,16 +22,16 @@ class ArraySum
      */
     public function getArraySum()
     {
-        $array_sum_w1 = array_sum($this->array);
+        $arraySumW1 = array_sum($this->array);
 
-        $array_sum_w2 = 0;
+        $arraySumW2 = 0;
         foreach ($this->array as $key => $value) {
-            $array_sum_w2 += $value;
+            $arraySumW2 += $value;
         }
 
         echo "\nGetting array sum: \n
-                Array Sum way 1: $array_sum_w1 \n
-                Array Sum way 2: $array_sum_w2 \n";
+                Array Sum way 1: $arraySumW1 \n
+                Array Sum way 2: $arraySumW2 \n";
     }
 }
 

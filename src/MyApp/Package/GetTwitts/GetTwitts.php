@@ -11,19 +11,19 @@ class GetTwitts
     /**
      * @var string the access_token to get access to twitter api
      */
-    private $access_token = '4341913648-U4Z2HjpWkOu7two69r1l2hFfZa5zukgNUbIT4W1';
+    private $accessToken = '4341913648-U4Z2HjpWkOu7two69r1l2hFfZa5zukgNUbIT4W1';
     /**
      * @var string the access_token_secret to get access to twitter api
      */
-    private $access_token_secret = 'ID9aGXO9HkpxmAW2pvxFhDivW09m6qNhss3HApDRKbvrj';
+    private $accessTokenSecret = 'ID9aGXO9HkpxmAW2pvxFhDivW09m6qNhss3HApDRKbvrj';
     /**
      * @var string the consumer_key to get access to twitter api
      */
-    private $consumer_key = 'ya9914sYBlwbDdgLwJO7ZnJ4j';
+    private $consumerKey = 'ya9914sYBlwbDdgLwJO7ZnJ4j';
     /**
      * @var string the consumer_secret to get access to twitter api
      */
-    private $consumer_secret = 'mbl59TLpDpKmlTfkGXO2d46xaiedX69QA7QHIoGOKPeEkyP7CV';
+    private $consumerSecret = 'mbl59TLpDpKmlTfkGXO2d46xaiedX69QA7QHIoGOKPeEkyP7CV';
 
     public function __construct($username)
     {
@@ -37,10 +37,10 @@ class GetTwitts
     {
 
         $settings = array(
-            'oauth_access_token' => $this->access_token,
-            'oauth_access_token_secret' => $this->access_token_secret,
-            'consumer_key' =>  $this->consumer_key,
-            'consumer_secret' => $this->consumer_secret
+            'oauth_access_token' => $this->accessToken,
+            'oauth_access_token_secret' => $this->accessTokenSecret,
+            'consumer_key' =>  $this->consumerKey,
+            'consumer_secret' => $this->consumerSecret
         );
 
         $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';

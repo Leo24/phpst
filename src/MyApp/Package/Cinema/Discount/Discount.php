@@ -4,23 +4,23 @@ namespace MyApp\Package\Cinema\Discount;
 
 class Discount
 {
-    private $student_discount;
-    private $schoolkid_discount;
+    private $studentDiscount;
+    private $schoolkidDiscount;
 
     /**
-     * @param $student_discount
+     * @param $studentDiscount
      */
-    public function setStudentDiscount($student_discount)
+    public function setStudentDiscount($studentDiscount)
     {
-        $this->student_discount = $student_discount;
+        $this->studentDiscount = $studentDiscount;
     }
 
     /**
-     * @param $schoolkid_discount
+     * @param $schoolkidDiscount
      */
-    public function setSchoolkidDiscount($schoolkid_discount)
+    public function setSchoolkidDiscount($schoolkidDiscount)
     {
-        $this->schoolkid_discount = $schoolkid_discount;
+        $this->schoolkidDiscount = $schoolkidDiscount;
     }
 
     /**
@@ -28,7 +28,7 @@ class Discount
      */
     public function getStudentDiscount()
     {
-        return $this->student_discount;
+        return $this->studentDiscount;
     }
 
     /**
@@ -36,7 +36,7 @@ class Discount
      */
     public function getSchoolkidDiscount()
     {
-        return $this->schoolkid_discount;
+        return $this->schoolkidDiscount;
     }
 
 

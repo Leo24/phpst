@@ -44,13 +44,10 @@ if ($argc == 1) {
         $a = new MyApp\Package\RemoveSpaces\RemoveSpaces('Do you just mean spaces or all whitespace?');
         print_r('remove spaces w1 '.$a->removeSpacesW1()."\n");
         print_r('remove spaces w2 '.$a->removeSpacesW2()."\n");
-    }elseif ($argv[1] == 'Substring') {
+    } elseif ($argv[1] == 'Substring') {
         $a = new MyApp\Package\Substring\Substring('abcdefg', 'def');
         print_r($a->checkEntryW1()."\n");
         print_r($a->checkEntryW2()."\n");
         $a->checkEntryW3();
     }
-
 }
-
-

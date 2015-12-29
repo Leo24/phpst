@@ -7,9 +7,9 @@ use MyApp\Package\Cinema\CinemaHalls\CinemaHall;
 class Cinema
 {
     public $user;
-    public $halls_list = array();
-    public $sessions_list;
-    private $user_discount;
+    public $hallsList = array();
+    public $sessionsList;
+    private $userDiscount;
 
     /**
      * @param $user
@@ -28,29 +28,29 @@ class Cinema
 
         $discount = new Discount\Discount();
         if ($this->user == 'student') {
-            return ($this->user_discount = $discount->getStudentDiscount());
+            return ($this->userDiscount = $discount->getStudentDiscount());
         } elseif ($this->user == 'schoolkid') {
-            return ($this->user_discount = $discount->getSchoolkidDiscount());
+            return ($this->userDiscount = $discount->getSchoolkidDiscount());
         }
-        return $this->user_discount = null;
+        return $this->userDiscount = null;
     }
 
 
     /**
-     * @param CinemaHall $cinema_hall
-     * @param $hall_name
+     * @param CinemaHall $cinemaHall
+     * @param $hallName
      */
-    public function setHall(CinemaHall $cinema_hall, $hall_name)
+    public function setHall(CinemaHall $cinemaHall, $hallName)
     {
-        $this->halls_list[$hall_name] = $cinema_hall;
+        $this->hallsList[$hallName] = $cinemaHall;
     }
 
     /**
-     * @param $hall_name
-     * @param $session_name
+     * @param $hallName
+     * @param $sessionName
      * @return mixed
      */
-    public function getSessionPrice($hall_name, $session_name)
+    public function getSessionPrice($hallName, $sessionName)
     {
         return $this->price;
     }
@@ -60,16 +60,16 @@ class Cinema
      */
     public function getHallsList()
     {
-        return $this->halls_list;
+        return $this->hallsList;
     }
 
     /**
      * @param $hall_name
      * @return mixed
      */
-    public function getHall($hall_name)
+    public function getHall($hallName)
     {
-        return $this->halls_list[$hall_name];
+        return $this->hallsList[$hallName];
     }
 
 }

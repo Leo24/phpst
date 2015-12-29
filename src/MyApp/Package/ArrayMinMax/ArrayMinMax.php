@@ -22,18 +22,18 @@ class ArrayMinMax
      */
     public function getArrayMaxValue()
     {
-        $array_max_value_w1 = max($this->array);
-        $processed_array = $this->array;
-        $array_max_value_w2 = $processed_array[0];
-        foreach ($processed_array as $key => $value) {
-            if ($array_max_value_w2 < $value) {
-                $array_max_value_w2 = $value;
+        $arrayMaxValueW1 = max($this->array);
+        $processedArray = $this->array;
+        $arrayMaxValueW2 = $processedArray[0];
+        foreach ($processedArray as $key => $value) {
+            if ($arrayMaxValueW2 < $value) {
+                $arrayMaxValueW2 = $value;
             }
         }
 
         echo "\nGetting array max value: \n
-        Max Value way 1: $array_max_value_w1 \n
-        Max Value way 2: $array_max_value_w2 \n";
+        Max Value way 1: $arrayMaxValueW1 \n
+        Max Value way 2: $arrayMaxValueW2 \n";
     }
 
     /**
@@ -41,18 +41,18 @@ class ArrayMinMax
      */
     public function getArrayMinValue()
     {
-        $array_min_value_w1 = min($this->array);
-        $processed_array = $this->array;
-        $array_min_value_w2 = $processed_array[0];
-        foreach ($processed_array as $key => $value) {
-            if ($array_min_value_w2 > $value) {
-                $array_min_value_w2 = $value;
+        $arrayMaxValueW1 = min($this->array);
+        $processedArray = $this->array;
+        $arrayMaxValueW2 = $processedArray[0];
+        foreach ($processedArray as $key => $value) {
+            if ($arrayMaxValueW2 > $value) {
+                $arrayMaxValueW2 = $value;
             }
         }
 
         echo "\nGetting array min value: \n
-        Min Value way 1: $array_min_value_w1 \n
-        Min Value way 2: $array_min_value_w2 \n";
+        Min Value way 1: $arrayMaxValueW1 \n
+        Min Value way 2: $arrayMaxValueW2 \n";
 
     }
 }

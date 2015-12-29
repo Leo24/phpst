@@ -7,32 +7,32 @@ use MyApp\Package\Cinema\Sessions\Session;
 class CinemaHall
 {
 
-    private $hall_name;
-    private $number_of_rows;
-    private $number_of_sits_in_row;
-    private $available_sessions = array();
+    private $hallName;
+    private $numberOfRows;
+    private $numberOfSitsInRow;
+    private $availableSessions = array();
 
     /**
-     * @param $hall_name
-     * @param $number_of_rows
-     * @param $number_of_sits_in_row
+     * @param $hallName
+     * @param $numberOfRows
+     * @param $numberOfSitsInRow
      */
     public function __construct(
-        $hall_name,
-        $number_of_rows,
-        $number_of_sits_in_row
+        $hallName,
+        $numberOfRows,
+        $numberOfSitsInRow
     ) {
-        $this->hall_name = $hall_name;
-        $this->number_of_rows = $number_of_rows;
-        $this->number_of_sits_in_row = $number_of_sits_in_row;
+        $this->hallName = $hallName;
+        $this->numberOfRows = $numberOfRows;
+        $this->numberOfSitsInRow = $numberOfSitsInRow;
     }
 
     /**
-     * @param Session $available_session
+     * @param Session $availableSession
      */
-    public function setAvailableSessions(Session $available_session)
+    public function setAvailableSessions(Session $availableSession)
     {
-        $this->available_sessions[] = $available_session;
+        $this->availableSessions[] = $availableSession;
     }
 
     /**
@@ -40,7 +40,7 @@ class CinemaHall
      */
     public function getAvailableSessions()
     {
-        return $this->available_sessions;
+        return $this->availableSessions;
     }
 
     /**
@@ -48,7 +48,7 @@ class CinemaHall
      */
     public function hallName()
     {
-        return $this->hall_name;
+        return $this->hallName;
     }
 }
 

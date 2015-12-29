@@ -4,25 +4,25 @@ namespace MyApp\Package\Cinema\Films;
 
 class Film
 {
-    private $film_name;
-    private $director_name = array();
+    private $filmName;
+    private $directorName = array();
     private $actors = array();
-    private $release_year;
+    private $releaseYear;
     private $summary;
 
 
     /**
-     * @param $film_name
-     * @param $director_name
+     * @param $filmName
+     * @param $directorName
      * @param $actors
-     * @param $release_year
+     * @param $releaseYear
      */
-    public function __construct($film_name, $director_name, $actors, $release_year)
+    public function __construct($filmName, $directorName, $actors, $releaseYear)
     {
-        $this->name = $film_name;
-        $this->director_name = $director_name;
+        $this->name = $filmName;
+        $this->director_name = $directorName;
         $this->actors = $actors ;
-        $this->release_year = $release_year;
+        $this->release_year = $releaseYear;
     }
 
     /**
@@ -31,12 +31,11 @@ class Film
     public function getFilmInfo()
     {
         return array(
-            'film_name'     => $this->film_name,
-            'director_name' => $this->director_name,
+            'film_name'     => $this->filmName,
+            'director_name' => $this->directorName,
             'actors'        => $this->actors,
-            'release_year'  => $this->release_year,
+            'release_year'  => $this->releaseYear,
             'summary'  => $this->summary
             );
     }
-
 }

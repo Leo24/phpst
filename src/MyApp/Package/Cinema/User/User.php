@@ -4,31 +4,31 @@ namespace MyApp\Package\Cinema\User;
 
 class User
 {
-    public $user_name;
-    public $user_status;
+    public $userName;
+    public $userStatus;
     public $place = array();
     public $ticket;
 
     /**
-     * @param $hall_name
-     * @param $session_name
-     * @param $row_number
-     * @param $place_number
+     * @param $hallName
+     * @param $sessionName
+     * @param $rowNumber
+     * @param $placeNumber
      * @return array
      */
-    public function bookPlace($hall_name, $session_name, $row_number, $place_number)
+    public function bookPlace($hallName, $sessionName, $rowNumber, $placeNumber)
     {
         /*Functionality for getting place from cinema hall*/
-        $this->place['row_number'] = $row_number;
-        $this->place['place_number'] = $place_number;
+        $this->place['rowNumber'] = $rowNumber;
+        $this->place['placeNumber'] = $placeNumber;
         return $this->place;
     }
 
-    public function buyTicket($hall_name, $session_name, $row_number, $place_number)
+    public function buyTicket($hallName, $sessionName, $rowNumber, $placeNumber)
     {
         /*Functionality for getting place from cinema hall*/
-        $this->ticket['row_number'] = $row_number;
-        $this->ticket['place_number'] = $place_number;
+        $this->ticket['rowNumber'] = $rowNumber;
+        $this->ticket['placeNumber'] = $placeNumber;
         return $this->ticket;
     }
 }
