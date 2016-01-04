@@ -1,0 +1,45 @@
+body {
+    text-align:center;
+}
+
+input[name="form_clock"]{
+    /*margin: 20px;*/
+    width: 66px;
+    border: 0;
+    padding: 2px;
+    background: #fff;
+    font: 12pt sans-serif;
+}
+
+div{
+    display: block;
+    margin: 20px auto;
+}
+
+#custom-background{
+    width: 20%;
+    height: 10%;
+    background: #0000cc;
+}
+
+#custom-background p{
+    padding: 8% 0;
+}
+
+.ticking-clock{
+    margin: 30px 0 0 5px;
+}
+
+.book{
+    position: relative;
+    width: 20%;
+    height: 10%;
+}
+
+.book img{
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    width: 30px;
+    height: 30px;
+}

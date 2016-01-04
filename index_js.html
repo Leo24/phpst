@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>JS Tasks</title>
+    <link rel="stylesheet" href="/src/MyApp/Package/js/css/style.css">
+    <script src="src/MyApp/Package/js/jscolor-2.0.4/jscolor.min.js"></script>
+    <script type="text/javascript" src="/src/MyApp/Package/js/testTask.js"></script>
+</head>
+<body>
+
+<div class="color-picker">
+    For comfort, you can choose and copy Color code here: <input class="jscolor" value="ab2567">
+</div>
+
+
+<form name=form-color method="get">
+    <input  id="color" name=color placeholder="Input here color code">
+</form>
+
+<!--<div><p>This block will be changed</p></div>-->
+<div id="custom-background"><p>This block background color will be changed</p></div>
+
+<div class="clock">
+    <p class="ticking-clock">Ticking clock</p>
+    <form name=form method="get">
+        <input name=form_clock >
+    </form>
+</div>
+
+
+<div class="book">
+    <p>Try to drag this book</p>
+    <img id="book" src="/src/MyApp/Package/js/img/booklet-clipart-book-red.jpg" alt="book">
+</div>
+
+
+<form action="" name="myForm" onsubmit="return(testTask.validate());">
+    <table cellspacing="2" cellpadding="2" border="1">
+
+        <tr>
+            <td align="right">Name</td>
+            <td><input type="text" name="Name" /></td>
+        </tr>
+
+        <tr>
+            <td align="right">EMail</td>
+            <td><input type="text" name="EMail" /></td>
+        </tr>
+
+        <tr>
+            <td align="right">Zip Code</td>
+            <td><input type="text" name="Zip" /></td>
+        </tr>
+
+        <tr>
+            <td align="right"></td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
