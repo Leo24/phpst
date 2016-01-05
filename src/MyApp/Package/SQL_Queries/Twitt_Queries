@@ -1,8 +1,6 @@
 Вывести последние 5 опубликованных твиттов.
-
 SELECT id, content FROM twitt
-WHERE create_date <= CURRENT_DATE()
-ORDER by id ASC
+ORDER by create_date DESC
 LIMIT 5
 
 
@@ -30,10 +28,11 @@ HAVING follower>1
 
 Вывести пользователей у которых ни одного твита.
 
-SELECT u.id, u.first_name, t.id FROM user as u
+SELECT u.id, u.first_name FROM user as u
 LEFT JOIN twitt as t
 ON u.id=t.user_id
-WHERE t.user_id IS NULL
+GROUP BY u.id
+HAVING COUNT(t.user_id)=0
 
 
 Вывести к-во комментариев для каждого поста.
@@ -41,4 +40,4 @@ WHERE t.user_id IS NULL
 SELECT twitt.id, twitt.content, COUNT(comments.twitt_id) FROM `twitt`
 LEFT JOIN `comments`
 ON twitt.id=comments.twitt_id
-GROUP BY comments.twitt_id
+GROUP BY twitt.id

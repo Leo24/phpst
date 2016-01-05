@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 21, 2015 at 01:18 PM
+-- Generation Time: Jan 05, 2016 at 12:33 PM
 -- Server version: 5.5.46-0ubuntu0.14.04.2
 -- PHP Version: 5.6.15-1+deb.sury.org~trusty+1
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   `content` text,
   `status` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `post`
@@ -53,7 +53,9 @@ INSERT INTO `post` (`id`, `name`, `publish_date`, `content`, `status`) VALUES
 (11, '16 Captivating Data Visualization Examples', '2015-12-16', 'Data can be very powerful. If you can actually understand what it''s telling you, that is.\r\n\r\nIt''s not easy to get clear takeaways by looking at a slew of numbers and stats. You''ve got to have the data presented in a logical, easy-to-understand way.\r\n\r\nEnter data visualization. The human brain processes visual information better than it processes text -- so using charts, graphs, and design elements, data visualization can help you explain trends and stats much more easily.\r\n\r\nBut not all data visualization is created equal. (Just check out “Why Most People’s Charts and Graphs Look Like Crap” to see what I mean.)\r\n\r\nSo, how do organize data in a way that''s both compelling and easy to digest? Get inspired by the following 16 examples of data visualization that communicate interesting information with both style and substance.', 'unpublished'),
 (12, 'Sample datasets for benchmarking and testing', '2015-12-31', 'Sometimes you just need some data to test and stress things. But randomly generated data is awful — it doesn’t have realistic distributions, and it isn’t easy to understand whether your results are meaningful and correct. Real or quasi-real data is best. Whether you’re looking for a couple of megabytes or many terabytes, the following sources of data might help you benchmark and test under more realistic conditions.\r\n\r\n    The venerable sakila test database: small, fake database of movies.\r\n    The employees test database: small, fake database of employees.\r\n    The Wikipedia page-view statistics database: large, real website traffic data.\r\n    The IMDB database: moderately large, real database of movies.\r\n    The FlightStats database: flight on-time arrival data, easy to import into MySQL.\r\n    The Bureau of Transportation Statistics: airline on-time data, downloadable in customizable ways.\r\n    The airline on-time performance and causes of delays data from data.gov: ditto.\r\n    The statistical review of world energy from British Petroleum: real data about our energy usage.\r\n    The Amazon AWS Public Data Sets: a large variety of data such as the mapping of the Human Genome and the US Census data.\r\n    The Weather Underground weather data: customize and download as CSV files.\r\n\r\nPost your favorites in the comments!', 'unpublished'),
 (13, 'About Percona', '2015-12-30', 'Percona is the only company that delivers enterprise-class software, support, consulting and managed services solutions for both MySQL® and MongoDB® across traditional and cloud-based platforms that maximize application performance while streamlining database efficiencies. Our global 24x7x365 consulting team has worked with over 3,000 clients worldwide, including the largest companies on the Internet, who use MySQL, Percona Server, Amazon® RDS for MySQL, MariaDB® and MongoDB.', 'published'),
-(14, 'Percona Technical Webinars\r\n', '2015-12-12', 'Percona offers free webinars about MySQL®, MongoDB®, and Percona open source software. Webinar topics include DBA and operational best practices such as configuration, migration, backup and recovery, performance, query tuning, replication, database architecture, big data, OpenStack/Cloud solutions, hybrid environments, security, and much, much more. ', 'published');
+(14, 'Percona Technical Webinars\r\n', '2015-12-12', 'Percona offers free webinars about MySQL®, MongoDB®, and Percona open source software. Webinar topics include DBA and operational best practices such as configuration, migration, backup and recovery, performance, query tuning, replication, database architecture, big data, OpenStack/Cloud solutions, hybrid environments, security, and much, much more. ', 'published'),
+(15, ' In Search of Lost Time by Marcel Proust ', '2016-01-05', 'Swann''s Way, the first part of A la recherche de temps perdu, Marcel Proust''s seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann''s passion for Odette. The work is incomparable. Edmund Wilson said "[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics." ', 'published'),
+(16, 'Ulysses by James Joyce', '2016-01-05', ' Ulysses chronicles the passage of Leopold Bloom through Dublin during an ordinary day, June 16, 1904. The title parallels and alludes to Odysseus (Latinised into Ulysses), the hero of Homer''s Odyssey (e.g., the correspondences between Leopold Bloom and Odysseus, Molly Bloom and Penelope, and Stephen Dedalus and Telemachus). Joyce fans worldwide now celebrate June 16 as Bloomsday. ', 'published');
 
 -- --------------------------------------------------------
 
@@ -62,41 +64,39 @@ INSERT INTO `post` (`id`, `name`, `publish_date`, `content`, `status`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `post_tags` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
-  `tag_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+  `tag_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `post_tags`
 --
 
-INSERT INTO `post_tags` (`id`, `post_id`, `tag_id`) VALUES
-(1, 1, 12),
-(2, 2, 11),
-(3, 3, 10),
-(4, 4, 9),
-(5, 5, 8),
-(6, 6, 7),
-(7, 7, 6),
-(8, 8, 5),
-(9, 9, 4),
-(10, 10, 3),
-(11, 11, 2),
-(12, 12, 1),
-(13, 1, 9),
-(14, 5, 8),
-(15, 12, 4),
-(16, 3, 5),
-(17, 4, 8),
-(18, 9, 3),
-(19, 7, 10),
-(20, 10, 6),
-(21, 4, 6),
-(22, 5, 6),
-(23, 4, 2),
-(24, 12, 23);
+INSERT INTO `post_tags` (`post_id`, `tag_id`) VALUES
+(1, 12),
+(2, 11),
+(3, 10),
+(4, 9),
+(5, 8),
+(6, 7),
+(7, 6),
+(8, 5),
+(9, 4),
+(10, 3),
+(11, 2),
+(12, 1),
+(1, 9),
+(5, 8),
+(12, 4),
+(3, 5),
+(4, 8),
+(9, 3),
+(7, 10),
+(10, 6),
+(4, 6),
+(5, 6),
+(4, 2),
+(12, 23);
 
 -- --------------------------------------------------------
 

@@ -5,33 +5,39 @@ SELECT COUNT(*) FROM post
 
 Вывести к-во постов опубликованных за последний день.
 
-SELECT id, name FROM post 
+SELECT COUNT(id) FROM post
 WHERE status='published' AND publish_date = CURRENT_DATE()
 
 
 Вывести последние 5 опубликованных постов.
 
-SELECT id, name FROM post 
-WHERE status='published' AND publish_date < CURRENT_DATE()
-ORDER by id ASC
+SELECT id, name, publish_date FROM post
+WHERE status='published'AND DATEDIFF(publish_date, CURRENT_DATE())<=0
+ORDER by publish_date DESC
 LIMIT 5
 
 
 Вывести все посты со списком тегов, разделенными запятыми.
-SELECT post.id, post.name, post_tags.tag_id 
-INTO OUTFILE '/home/leonid/Documents/Query_result/Query_result.txt'
-FIELDS TERMINATED BY ','
+SELECT post.id, post.name,
+GROUP_CONCAT(DISTINCT post_tags.tag_id ORDER BY post_tags.tag_id SEPARATOR ', ') AS tags
 FROM `post`
 LEFT JOIN `post_tags`
 ON post.id=post_tags.post_id
+GROUP BY post.id
 
 
 Вывести все посты у которых нет тегов.
 
-SELECT post.id, post.name FROM `post`
-LEFT JOIN `post_tags` 
+SELECT COUNT(*) number_of_posts_without_tags FROM
+(
+    SELECT post.id FROM `post`
+LEFT JOIN `post_tags`
 ON post.id=post_tags.post_id
-WHERE post_tags.post_id IS NULL
+LEFT JOIN `tags`
+ON tags.id=post_tags.tag_id
+GROUP BY post.id
+HAVING COUNT(post_tags.tag_id)=0
+) src;
 
 
 Вывести все посты, которые начинаются на букву 'S'.
