@@ -9,11 +9,21 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "j7mbo/twitter-api-php": "dev-master"
+        "j7mbo/twitter-api-php": "dev-master",
+        "monolog/monolog": "^1.17"
+    },
+    "config": {
+        "vendor-dir": "plugins"
     },
     "autoload": {
         "psr-0": {
             "TwitterApi": "vendor/twitter-api-php/"
         }
-    }
+    },
+    "repositories":[
+        {
+            "type":"git",
+            "url":"https://github.com/Leo24/phpst"
+        }
+    ]
 }

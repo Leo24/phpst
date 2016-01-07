@@ -1,5 +1,5 @@
 <?php
-$loader = require 'vendor/autoload.php';
+$loader = require 'plugins/autoload.php';
 $dir = __DIR__;
 $loader->add('MyApp\\', $dir.'/src/');
 
