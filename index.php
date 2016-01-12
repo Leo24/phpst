@@ -49,5 +49,13 @@ if ($argc == 1) {
         print_r($a->checkEntryW1()."\n");
         print_r($a->checkEntryW2()."\n");
         $a->checkEntryW3();
+    } elseif ($argv[1] == 'Sequences') {
+        $a = new MyApp\Package\Sequences\Sequences();
+//        $a->printSeq(6,5);
+        print_r($argv[2]."\n");
+        $array = explode('.', $argv[2]);
+        $n = $array[0];
+        $m = $array[1];
+        $a->printSeq($n, $m);
     }
 }
